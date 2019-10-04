@@ -44,7 +44,7 @@ def get_english_meaning(emoticon_yaml, eastern_emoticon)
   if new_hash[:get_meaning].has_key?(eastern_emoticon) == false 
     return "sorry, that emoticon was not found"
   else
-    
+    new_hash.each do 
   
 end
 
