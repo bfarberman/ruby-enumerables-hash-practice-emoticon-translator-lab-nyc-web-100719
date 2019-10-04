@@ -8,7 +8,7 @@ def load_library(emoticon_yaml)
   emoticon_hash.each do [meaning, emoticons_array]
   new_hash[:get_meaning] [emoticons_array[1]] = meaning
 end
-emoticon_hash.each do 
+emoticon_hash.each do |meaning, e|
 end
 
 def get_japanese_emoticon
