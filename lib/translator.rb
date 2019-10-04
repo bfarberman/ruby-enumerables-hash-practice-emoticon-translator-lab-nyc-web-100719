@@ -1,6 +1,6 @@
-def load_library(emoticon_yaml)
+def load_library(yaml_emoticon)
   require 'yaml' 
-  emoticon_yaml = "./lib/emoticons.yml"
+  yaml_emoticon = "./lib/emoticons.yml"
   emoticon_hash = YAML.load_file("./lib/emoticons.yml")
   new_hash = {}
   new_hash[:get_meaning] = {}
