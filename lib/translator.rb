@@ -17,7 +17,7 @@ end
 
 
 
-def get_japanese_emoticon
+def get_japanese_emoticon(emoticon_yaml, western_emoticon)
   
 end
 
