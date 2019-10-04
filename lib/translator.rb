@@ -2,16 +2,16 @@ def load_library(yaml)
   require 'yaml' 
   yaml = "./lib/emoticons.yml"
   emoticon_hash = YAML.load_file("./lib/emoticons.yml")
-  new_hash = {}
-  new_hash[:get_meaning] = {}
-  new_hash[:get_emoticon] = {}
+  n_hash = {}
+  n_hash[:get_meaning] = {}
+  n_hash[:get_emoticon] = {}
     emoticon_hash.each do |meaning, array_of_emoticons|
-      new_hash[:get_meaning][array_of_emoticons[1]] = meaning
+      n_hash[:get_meaning][array_of_emoticons[1]] = meaning
     end
     emoticon_hash.each do |meaning, array_of_emoticons|
-      new_hash[:get_emoticon][array_of_emoticons[0]] = array_of_emoticons[1]
+      n_hash[:get_emoticon][array_of_emoticons[0]] = array_of_emoticons[1]
     end
-  return new_hash
+  return n_hash
 end
 
 
