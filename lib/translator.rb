@@ -18,6 +18,7 @@ end
 
 
 def get_japanese_emoticon(emoticon_yaml, western_emoticon)
+  new_hash = 
   
 end
 
