@@ -1,4 +1,4 @@
-def load_library()
+def load_library(emoticon_yaml)
   
 end
 
