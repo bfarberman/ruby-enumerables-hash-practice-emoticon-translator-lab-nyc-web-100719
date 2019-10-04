@@ -19,7 +19,8 @@ end
 
 def get_japanese_emoticon(emoticon_yaml, western_emoticon)
   new_hash = load_library(emoticon_yaml)
-  if new_hash[:get_emoticon].has_key?(western_emoticon)
+  if new_hash[:get_emoticon].has_key?(western_emoticon) == false 
+    
   
 end
 
