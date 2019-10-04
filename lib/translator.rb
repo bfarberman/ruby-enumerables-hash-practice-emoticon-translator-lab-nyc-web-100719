@@ -39,14 +39,14 @@ end
 
 
 
-def get_english_meaning(yaml, eastern_emoticon)
+def get_english_meaning(yaml, other_emoticon)
   new_hash = load_library(yaml)
-    if new_hash[:get_meaning].has_key?(eastern_emoticon) == false
+    if new_hash[:get_meaning].has_key?(other_emoticon) == false
       return "Sorry, that emoticon was not found"
     else
       new_hash.each do |get_key, translator_hash|
         translator_hash.each do |japanese_emoticon, english_meaning|
-          if japanese_emoticon == eastern_emoticon
+          if japanese_emoticon == other_emoticon
             return english_meaning
           end
         end
