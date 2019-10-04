@@ -5,7 +5,7 @@ def load_library(emoticon_yaml)
   new_hash = {}
   new_hash[:get_meaning] = {}
   new_hash[:get_emoticon] = {}
-  emoticon_hash.each do [meaning, ]
+  emoticon_hash.each do [meaning, emoticons_array]
 end
 
 def get_japanese_emoticon
