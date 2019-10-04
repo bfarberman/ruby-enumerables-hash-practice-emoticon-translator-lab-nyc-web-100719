@@ -41,6 +41,7 @@ end
 
 def get_english_meaning(emoticon_yaml, eastern_emoticon)
   new_hash = load_library(emoticon_yaml)
+  if new_hash
   
 end
 
