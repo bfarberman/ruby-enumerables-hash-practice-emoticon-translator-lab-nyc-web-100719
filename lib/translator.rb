@@ -1,15 +1,15 @@
-def load_library(emoticon_yaml)
+def load_library(yaml_emoticon)
   require 'yaml'
-  emoticon_yaml = "./lib/emoticons.yml"
+  yaml_emoticon = "./lib/emoticons.yml"
   emoticon_hash = YAML.load_file("./lib/emoticons.yml")
   new_hash = {}
   new_hash[:get_meaning] = {}
   new_hash[:get_emoticon] = {}
-  emoticon_hash.each do [meaning, emoticons_array]
-  new_hash[:get_meaning] [emoticons_array[1]] = meaning
+  emoticon_hash.each do [array_of_emoticons, meaning]
+  new_hash[:get_meaning] [array_of_emoticons[1]] = meaning
 end
-emoticon_hash.each do |meaning, emoticons_array|
-  new_hash[:get_emoticon] [emoticons_array[0]] = emoticons_array[1]
+emoticon_hash.each do |meaning, array_of_emoticons|
+  new_hash[:get_emoticon] [array_of_emoticons[0]] = array_of_emoticons[1]
 end
 return new_hash
 end
@@ -17,10 +17,10 @@ end
 
 
 
-def get_japanese_emoticon(emoticon_yaml, western_emoticon)
-  new_hash = load_library(emoticon_yaml)
+def get_japanese_emoticon(yaml_emoticon, western_emoticon)
+  new_hash = load_library(yaml_emoticon)
   if new_hash[:get_emoticon].has_key?(western_emoticon) == false 
-    return "sorry, that emoticon was not found"
+    return "Sorry, that emoticon was not found"
   else
     new_hash.each do |get_key, translator_hash|
       translator_hash.each do |english_emoticon, japanese_emoticon|
@@ -39,10 +39,10 @@ end
 
 
 
-def get_english_meaning(emoticon_yaml, eastern_emoticon)
-  new_hash = load_library(emoticon_yaml)
+def get_english_meaning(yaml_emoticon, eastern_emoticon)
+  new_hash = load_library(yaml_emoticon)
   if new_hash[:get_meaning].has_key?(eastern_emoticon) == false 
-    return "sorry, that emoticon was not found"
+    return "Sorry, that emoticon was not found"
   else
     new_hash.each do |get_key, translator_hash|
       translator_hash.each do |japanese_emoticon, english_meaning|
