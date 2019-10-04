@@ -5,7 +5,7 @@ def load_library(yaml_emoticon)
   new_hash = {}
   new_hash[:get_meaning] = {}
   new_hash[:get_emoticon] = {}
-  emoticon_hash.each do [array_of_emoticons, meaning]
+  emoticon_hash.each do [meaning, array_of_emoticons]
   new_hash[:get_meaning] [array_of_emoticons[1]] = meaning
 end
 emoticon_hash.each do |meaning, array_of_emoticons|
