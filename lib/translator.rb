@@ -26,7 +26,10 @@ def get_japanese_emoticon(emoticon_yaml, western_emoticon)
       translator_hash.each do |english_emoticon, japanese_emoticon|
         if english_emoticon == western_emoticon
           return japanese_emoticon
-  
+        end
+      end
+    end
+  end 
 end
 
 
