@@ -22,7 +22,7 @@ def get_japanese_emoticon(emoticon_yaml, western_emoticon)
   if new_hash[:get_emoticon].has_key?(western_emoticon) == false 
     return "sorry, that emoticon was not found"
   else
-    new_hash.each do |get_key|
+    new_hash.each do |get_key, translator_hash|
   
 end
 
