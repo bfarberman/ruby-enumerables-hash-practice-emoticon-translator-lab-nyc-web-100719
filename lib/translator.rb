@@ -3,7 +3,7 @@ def load_library(emoticon_yaml)
   emoticon_yaml = "./lib/emoticons.yml"
   emoticon_hash = YAML.load_file("./lib/emoticons.yml")
   new_hash = {}
-  new_hash[:]
+  new_hash[:get_meaning]
 end
 
 def get_japanese_emoticon
