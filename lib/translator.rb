@@ -18,7 +18,7 @@ end
 
 
 def get_japanese_emoticon(emoticon_yaml, western_emoticon)
-  new_hash = load_library
+  new_hash = load_library(emoticon_yaml)
   
 end
 
