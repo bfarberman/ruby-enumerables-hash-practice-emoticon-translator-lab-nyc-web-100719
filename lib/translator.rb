@@ -48,7 +48,10 @@ def get_english_meaning(emoticon_yaml, eastern_emoticon)
       translator_hash.each do |japanese_emoticon, english_meaning|
         if japanese_emoticon == eastern_emoticon
           return english_meaning
-  
+        end
+      end
+    end
+  end
 end
 
 
