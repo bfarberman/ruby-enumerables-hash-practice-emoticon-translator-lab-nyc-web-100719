@@ -5,11 +5,11 @@ def load_library(emoticon_yaml)
   new_hash = {}
   new_hash[:get_meaning] = {}
   new_hash[:get_emoticon] = {}
-    emoticon_hash.each do |meaning, emoticons_array|
-      new_hash[:get_meaning][emoticons_array[1]] = meaning
+    emoticon_hash.each do |meaning, array_of_emoticons|
+      new_hash[:get_meaning][array_of_emoticons[1]] = meaning
     end
-    emoticon_hash.each do |meaning, emoticons_array|
-      new_hash[:get_emoticon][emoticons_array[0]] = emoticons_array[1]
+    emoticon_hash.each do |meaning, array_of_emoticons|
+      new_hash[:get_emoticon][array_of_emoticons[0]] = array_of_emoticons[1]
     end
   return new_hash
 end
