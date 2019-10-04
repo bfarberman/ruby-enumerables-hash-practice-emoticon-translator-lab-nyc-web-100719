@@ -11,13 +11,23 @@ end
 emoticon_hash.each do |meaning, emoticons_array|
   new_hash[:get_emoticon] [emoticons_array[0]] = emoticons_array[1]
 end
-
+return new_hash
 end
+
+
+
 
 def get_japanese_emoticon
-  # code goes here
+  
 end
 
+
+
+
+
+
+
+
 def get_english_meaning
-  # code goes here
+  
 end
