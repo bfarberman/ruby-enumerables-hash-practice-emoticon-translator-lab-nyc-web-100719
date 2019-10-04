@@ -1,6 +1,6 @@
-def load_library(yaml_emoticon)
+def load_library(emoticon_yaml)
   require 'yaml'
-  yaml_emoticon = "./lib/emoticons.yml"
+  emoticon_yaml = "./lib/emoticons.yml"
   emoticon_hash = YAML.load_file("./lib/emoticons.yml")
   new_hash = {}
   new_hash[:get_meaning] = {}
@@ -17,8 +17,8 @@ end
 
 
 
-def get_japanese_emoticon(yaml_emoticon, western_emoticon)
-  new_hash = load_library(yaml_emoticon)
+def get_japanese_emoticon(emoticon_yaml, western_emoticon)
+  new_hash = load_library(emoticon_yaml)
   if new_hash[:get_emoticon].has_key?(western_emoticon) == false 
     return "Sorry, that emoticon was not found"
   else
@@ -39,8 +39,8 @@ end
 
 
 
-def get_english_meaning(yaml_emoticon, eastern_emoticon)
-  new_hash = load_library(yaml_emoticon)
+def get_english_meaning(emoticon_yaml, eastern_emoticon)
+  new_hash = load_library(emoticon_yaml)
   if new_hash[:get_meaning].has_key?(eastern_emoticon) == false 
     return "Sorry, that emoticon was not found"
   else
