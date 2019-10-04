@@ -20,8 +20,8 @@ end
 
 
 
-def get_japanese_emoticon(emoticon_yaml, western_emoticon)
-  new_hash = load_library(emoticon_yaml)      #returns new_hash
+def get_japanese_emoticon(yaml, western_emoticon)
+  new_hash = load_library(yaml)   
     if new_hash[:get_emoticon].has_key?(western_emoticon) == false
       return "Sorry, that emoticon was not found"
     else
@@ -39,8 +39,8 @@ end
 
 
 
-def get_english_meaning(emoticon_yaml, eastern_emoticon)
-  new_hash = load_library(emoticon_yaml)
+def get_english_meaning(yaml, eastern_emoticon)
+  new_hash = load_library(yaml)
     if new_hash[:get_meaning].has_key?(eastern_emoticon) == false
       return "Sorry, that emoticon was not found"
     else
