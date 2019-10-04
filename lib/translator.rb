@@ -39,6 +39,15 @@ end
 
 
 
-def get_english_meaning(emoticon_yaml, )
+def get_english_meaning(emoticon_yaml, eastern_emoticon)
+  
   
 end
+
+
+
+
+
+
+
+
