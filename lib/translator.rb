@@ -45,6 +45,7 @@ def get_english_meaning(emoticon_yaml, eastern_emoticon)
     return "sorry, that emoticon was not found"
   else
     new_hash.each do |get_key, translator_hash|
+      translator_hash.each do 
   
 end
 
